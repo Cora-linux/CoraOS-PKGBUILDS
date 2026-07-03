@@ -1,0 +1,38 @@
+# Maintainer: CoraOS <support@coraos.org>
+pkgname=coraos-zsh-config
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="CoraOS default Zsh configuration (system-wide, managed)"
+arch=('any')
+url="https://github.com/CoraOS/CoraOS-PKGBUILDS"
+license=('GPL-3.0-or-later')
+depends=(
+    zsh
+    eza
+    bat
+    fd
+    fzf
+    zoxide
+)
+backup=('etc/zsh/zshrc')
+source=(".zshrc"
+        ".p10k.zsh")
+sha256sums=('d8ce6c6a383408f1346e7b1ee17a7e9ac1f1c6401405423a69b67183e55edc92'
+            '9eb64ee8469657d7241304da31b3fdeddfdda3f63314fe868b97b1ce5151aca7')
+
+package() {
+    install -Dm644 "$srcdir/.zshrc" \
+        "$pkgdir/usr/share/coraos/zsh/coraos.zshrc"
+    install -Dm644 "$srcdir/.p10k.zsh" \
+        "$pkgdir/usr/share/coraos/zsh/coraos.p10k.zsh"
+
+    install -d "$pkgdir/usr/share/coraos/zsh/plugins"
+    cp -r "$startdir/plugins/"* "$pkgdir/usr/share/coraos/zsh/plugins/"
+    find "$pkgdir/usr/share/coraos/zsh/plugins" -type f -exec chmod 644 {} \;
+    find "$pkgdir/usr/share/coraos/zsh/plugins" -type d -exec chmod 755 {} \;
+
+    install -Dm644 /dev/stdin "$pkgdir/etc/zsh/zshrc" <<'EOF'
+# CoraOS managed zsh config -- do not edit, use ~/.zshrc.local instead
+[[ -f /usr/share/coraos/zsh/coraos.zshrc ]] && source /usr/share/coraos/zsh/coraos.zshrc
+EOF
+}
