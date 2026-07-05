@@ -25,8 +25,7 @@ setopt NO_BEEP
 setopt PROMPT_SUBST
 setopt MENU_COMPLETE
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=nano
 export PAGER=less
 export LESS='-R'
 export TERMINAL=kitty
@@ -81,14 +80,15 @@ alias lt='eza --tree --icons'
 alias tree='eza --tree --icons'
 alias grep='rg'
 alias find='fd'
-alias vim='nvim'
-alias vi='nvim'
+alias nano='nano'
 alias c='clear'
 alias cls='clear'
 alias reload='exec zsh'
 alias mkdir='mkdir -pv'
 alias cp='cp -iv'
 alias mv='mv -iv'
+alias rmd='rmdir -v'
+alias rmde='rmdir -v --ignore-fail-on-non-empty'
 alias rm='rm -Iv'
 alias df='df -h'
 alias du='du -h'
