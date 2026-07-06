@@ -1,5 +1,5 @@
 # Maintainer: CoraOS <support@coraos.org>
-pkgname=vscode
+pkgname=code
 pkgver=1.126.0
 pkgrel=1
 pkgdesc="Visual Studio Code - Code editing redefined"
