@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/builder-workflow.yaml
+    uses: Cora-Linux-Distro/ci-templates/.github/workflows/build-simple.yml@main
     with:
       pkgdir: code
       keep_versions: 2
