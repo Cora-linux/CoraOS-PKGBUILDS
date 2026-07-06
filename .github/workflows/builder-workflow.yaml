@@ -371,7 +371,7 @@ jobs:
           echo "::endgroup::"
 
       - name: Phase 3.9 — pre-swap verification
-        shell: bash
+        shell: su builder -s /bin/bash {0}
         run: |
           set -euo pipefail
           cd CoraOS_Repo.staging
