@@ -1,0 +1,12 @@
+# Maintainer: CoraOS <support@coraos.org>
+pkgname=coraos-pacman-conf
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="CoraOS System Default Pacman Configuration."
+arch=('any')
+license=('GPL-3.0-or-later')
+url="https://github.com/CoraOS/CoraOS-PKGBUILDS"
+depends=(
+    pacman
+    w
+)
