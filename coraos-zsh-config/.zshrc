@@ -60,8 +60,8 @@ elif [[ -f /usr/share/coraos/zsh/coraos.p10k.zsh ]]; then
     source /usr/share/coraos/zsh/coraos.p10k.zsh
 fi
 
-source /usr/share/coraos/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/coraos/zsh/plugins/history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/coraos/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 bindkey '^[[A' history-substring-search-up

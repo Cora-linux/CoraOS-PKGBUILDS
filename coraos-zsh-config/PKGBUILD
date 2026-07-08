@@ -16,11 +16,12 @@ depends=(
     'bat'
     'zoxide'
     'git'
+    'vim'
 )
 source=(
     '.zshrc'
     '.p10k.zsh'
-    'fast-syntax-highlighting::git+https://github.com/Cora-Linux-Distro/fast-syntax-highlighting.git#commit=REPLACE_WITH_REAL_SHA'
+    'fast-syntax-highlighting::git+https://github.com/zdharma-continuous/fast-syntax-highlighting.git'
 )
 sha256sums=('SKIP' 'SKIP' 'SKIP')
 
