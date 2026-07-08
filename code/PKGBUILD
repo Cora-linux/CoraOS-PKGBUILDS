@@ -1,6 +1,6 @@
 # Maintainer: CoraOS <support@coraos.org>
-pkgname=code
-pkgver=1.127.0
+pkgname=vscode
+pkgver=1.128.0
 pkgrel=1
 pkgdesc="Microsoft Visual Studio Code editor"
 arch=('x86_64')
