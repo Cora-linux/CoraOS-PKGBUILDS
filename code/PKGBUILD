@@ -32,7 +32,7 @@ provides=('code' 'vscode')
 conflicts=('code-git' 'visual-studio-code-bin')
 options=('!strip')
 source=("code-stable-x64-${pkgver}.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-x64/stable")
-sha256sums=('e06fb36791c9baf7495d4b7dc0f5aaa8254e7d1a60a5ee43e6c7debc05c962b5')
+sha256sums=('a9b4ce974ecc10c7456da9879763bf0a7a432710bd26c95a89a8a168f2aff57b')
 
 package() {
     install -d "$pkgdir/opt/code"
