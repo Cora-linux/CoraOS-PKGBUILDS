@@ -2,8 +2,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ZDOTDIR="$HOME"
-
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
 SAVEHIST=100000
@@ -55,9 +53,9 @@ bindkey '^[[B' history-substring-search-down
 
 [[ -r /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 if [[ -f ~/.p10k.zsh ]]; then
-    source ~/.p10k.zsh
-elif [[ -f /usr/share/coraos/zsh/coraos.p10k.zsh ]]; then
-    source /usr/share/coraos/zsh/coraos.p10k.zsh
+	source ~/.p10k.zsh
+elif [[ -f /usr/share/coraos/zsh/.p10k.zsh ]]; then
+	source /usr/share/coraos/zsh/.p10k.zsh
 fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
