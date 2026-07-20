@@ -2,7 +2,7 @@
 
 pkgname=coraos-branding
 pkgver=1.0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="CoraOS branding (logos,wallpapers,etc)"
 arch=('any')
 url="https://coraos.org"
